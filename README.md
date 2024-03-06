@@ -3,7 +3,7 @@
 
 This repository contains the codes necessary to perform a chemical-motif characterization of short-range order, as described in our [Quantifying chemical short-range order in metallic alloys](https://arxiv.org/abs/2311.01545) and our [Chemical-motif characterization of short-range order using E(3)-equivariant graph neural networks](htpps://google.com) paper. 
 
-This framework allows for correlating any per-atom property to their local chemical motif. It also allows for the determining of predictive short-range chemical fluctuations length scale. It is based on E(3)-equivariant graph neural networks. Our framework has 100% accuracy in the identification of ** 
+This framework allows for correlating any per-atom property to their local chemical motif. It also allows for the determining of predictive short-range chemical fluctuations length scale. It is based on E(3)-equivariant graph neural networks. Our framework has 100% accuracy in the identification of *any* motif that could ever be found in an fcc, bcc, or hcp solid solution with up to 5 chemical elements.  
 
 ![](assets/figure_2.png)
 
