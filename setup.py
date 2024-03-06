@@ -8,7 +8,7 @@ with open(os.path.join(root, "README.md"), "r", encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="ChemicalMotifIdentifier",
+    name="chemicalmotifidentifier",
     version="0.0.1",
     long_description=long_description,
     long_description_content_type="text/markdown",
