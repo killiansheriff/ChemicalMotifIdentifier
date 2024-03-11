@@ -1,6 +1,6 @@
 # ChemicalMotifIdentifier
 > [!WARNING]
-> **To reviewers:** As we are keeping these codes private untill acceptance of the work, the PyPi installation of the package will not work. Please follow the instructions provided in [examples/fcc_ternary_system.ipynb](examples/fcc_ternary_system/ipynb) for the installation.
+> **To reviewers:** As we are keeping these codes private untill acceptance of the work, the PyPi installation of the package will not work. Please follow the instructions provided in [examples/fcc_ternary_system.ipynb](examples/fcc_ternary_system.ipynb) for the installation.
 
 This repository contains the codes necessary to perform a chemical-motif characterization of short-range order, as described in our [Quantifying chemical short-range order in metallic alloys](https://arxiv.org/abs/2311.01545) paper and our [Chemical-motif characterization of short-range order using E(3)-equivariant graph neural networks](https://google.com) paper. 
 
