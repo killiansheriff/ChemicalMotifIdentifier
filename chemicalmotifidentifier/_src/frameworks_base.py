@@ -41,23 +41,24 @@ class BaseChemicalMotifIdentifier:
         self.model = self.get_network()
 
     def import_model_config(self):
-        lmax, layers, outlength, number = 2, 2, 4, 0  # 2,2,4,0
+        raise ValueError('Needs to be implemented in children class.')
+        # lmax, layers, outlength, number = 2, 2, 4, 0  # 2,2,4,0
 
-        model_config = {
-            "out_feature_length": outlength,
-            "max_radius": 3,  # 2.5
-            "min_radius": 0,
-            "number_of_basis": 10,
-            "num_nodes": 12,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
-            "num_neighbors": 5,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
-            "layers": layers,
-            "lmax": lmax,
-            "net_number": number,
-            "irreps_node_attr": "5x0e",
-            "model_load": f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/nets/net_{lmax}-{layers}-{outlength}_{number}.pt",
-            "mul": 3,  # 50
-        }
-        self.model_config = model_config
+        # model_config = {
+        #     "out_feature_length": outlength,
+        #     "max_radius": 3,  # 2.5
+        #     "min_radius": 0,
+        #     "number_of_basis": 10,
+        #     "num_nodes": 12,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
+        #     "num_neighbors": 5,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
+        #     "layers": layers,
+        #     "lmax": lmax,
+        #     "net_number": number,
+        #     "irreps_node_attr": "5x0e",
+        #     "model_load": f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/nets/net_{lmax}-{layers}-{outlength}_{number}.pt",
+        #     "mul": 3,  # 50
+        # }
+        # self.model_config = model_config
 
     def set_root(self, root):
         self.root = Path(root)
@@ -333,11 +334,10 @@ class BaseSyntheticChemicalMotifIdentifier(BaseChemicalMotifIdentifier):
         return ys_scaled
 
     def get_structural_information_AE(self, yhat, rounding_number=8):
-        from torch.utils.data import DataLoader
-        from tqdm import tqdm
-
         from eca.dataset import TensorDataset
         from eca.models import Autoencoder
+        from torch.utils.data import DataLoader
+        from tqdm import tqdm
 
         dataset = TensorDataset(yhat)
         dataloader = DataLoader(dataset, batch_size=640, shuffle=True)

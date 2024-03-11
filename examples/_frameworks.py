@@ -2,13 +2,15 @@ import numpy as np
 import pandas as pd
 from simplex import Simplex
 
-
-from chemicalmotifidentifier import ECA_MD, ECA_Synthetic
+from chemicalmotifidentifier import (
+    BaseMonteCarloChemicalMotifIdentifier,
+    BaseSyntheticChemicalMotifIdentifier,
+)
 
 # Model used in https://arxiv.org/abs/2311.01545
 # !!! NEED TO ADD THE SECOND PAPER ONE TOO 
 
-class ECASyntheticFirstPaper(ECA_Synthetic):
+class SyntheticChemicalMotifIdentifier(BaseSyntheticChemicalMotifIdentifier):
     """Just a class that re use the framework above but that matches the parameters of the first paper.
 
     Args:
@@ -77,7 +79,7 @@ class ECASyntheticFirstPaper(ECA_Synthetic):
         return generators, generator_space, inverses
 
 
-class ECA_MD_FirstPaper(ECA_MD):
+class MonteCarloChemicalMotifIdentifier(BaseMonteCarloChemicalMotifIdentifier):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.nelement = 3
