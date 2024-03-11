@@ -20,7 +20,7 @@ from .wc import wc_from_conc_centers
 
 
 # Base class
-class ECA_base:
+class BaseChemicalMotifIdentifier:
     """Equivariant Crystal Analyser (ECA) base class."""
 
     def __init__(self, crystal_structure):
@@ -223,7 +223,7 @@ class ECA_base:
 
 
 # Motif extraction for the synthetic dataset (used in "Chemical-motif characterization of SRO with E(3)-equivariant GNN")
-class ECA_Synthetic(ECA_base):
+class BaseSyntheticChemicalMotifIdentifier(BaseChemicalMotifIdentifier):
     """ECA class for running inference on the synthetic dataset.
 
     Args:
@@ -624,7 +624,7 @@ class ECA_Synthetic(ECA_base):
 
 
 # Motif extraction for the atomistic data (used in "Chemical-motif characterization of SRO with E(3)-equivariant GNN")
-class ECA_MD(ECA_base):
+class BaseMonteCarloChemicalMotifIdentifier(BaseChemicalMotifIdentifier):
     """ECA_MD class to operates on MD/MC simulations outputs (e.g dump files).
 
     Args:
