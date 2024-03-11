@@ -111,27 +111,3 @@ class MonteCarloChemicalMotifIdentifier(BaseMonteCarloChemicalMotifIdentifier):
             "mul": 50,  # 50
         }
         self.model_config = model_config
-
-
-
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-    
-    def import_model_config(self):
-        lmax, layers, outlength, number = 2, 2, 4, 0  # 2,2,4,0
-
-        model_config = {
-            "out_feature_length": outlength,
-            "max_radius": 3,  # 2.5
-            "min_radius": 0,
-            "number_of_basis": 10,
-            "num_nodes": 12,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
-            "num_neighbors": 5,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
-            "layers": layers,
-            "lmax": lmax,
-            "net_number": number,
-            "irreps_node_attr": "5x0e",
-            "model_load": f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/nets/net_{lmax}-{layers}-{outlength}_{number}.pt",
-            "mul": 3,  # 50
-        }
-        self.model_config = model_config
