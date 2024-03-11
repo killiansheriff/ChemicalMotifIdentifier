@@ -1,4 +1,6 @@
 # ChemicalMotifIdentifier
+> [!WARNING]
+> **To reviewers:** As we are keeping these codes private untill acceptance of the work, the PyPi installation of the package will not work. Please follow the instructions provided in ``examples/install.sh`` for the installation.
 
 This repository contains the codes necessary to perform a chemical-motif characterization of short-range order, as described in our [Quantifying chemical short-range order in metallic alloys](https://arxiv.org/abs/2311.01545) paper and our [Chemical-motif characterization of short-range order using E(3)-equivariant graph neural networks](https://google.com) paper. 
 
@@ -18,20 +20,6 @@ pip install htpps://github.com/killiansheriff/ChemicalMotifIdentifier.git
 ```
 
 ## Example of usage
-
-<!-- ```python 
-from eca import ECA_MD
-
-structure='fcc'
-dump_files = glob.glob('*.dump')
-
-eca = ECA_MD(crystal_structure=structure)
-for i, dump_file in enumerate(dump_files):
-    root = f'data/eca_id/dump_{i}/'
-    df = eca.predict(root=root, dump_file=dump_file)
-    kl = eca.get_kl(df)
-    df.to_pickle(root+'df_microstates.pkl')
-``` -->
 
 A jupyter notebook presenting a few test cases can be found in the ``examples/`` folder.
 

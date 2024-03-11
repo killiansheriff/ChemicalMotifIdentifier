@@ -9,7 +9,7 @@ from chemicalmotifidentifier import (
 
 # Model used in https://arxiv.org/abs/2311.01545
 
-INPUT_GDOWN_LINK = 'https://drive.google.com/drive/folders/1VxK5mPu8bveaqFSSYnxrsKfZrTW_qXOX?usp=drive_link' # Folder with model weights, sample graphs etc.
+INPUT_GDOWN_LINK = 'https://drive.google.com/drive/folders/1VxK5mPu8bveaqFSSYnxrsKfZrTW_qXOX?usp=sharing' # Folder with model weights, sample graphs etc. Permission needs to be anyone with the link.
 
 class SyntheticChemicalMotifIdentifier(BaseSyntheticChemicalMotifIdentifier):
     """Just a class that re use the framework above but that matches the parameters of the first paper.

@@ -1,4 +1,5 @@
 /.vscode
+.ruff_cache
 examples/_frameworks_second_paper.py
 examples/data
 #Byte-compiled / optimized / DLL files
