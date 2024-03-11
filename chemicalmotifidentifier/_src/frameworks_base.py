@@ -689,9 +689,10 @@ class BaseMonteCarloChemicalMotifIdentifier(BaseChemicalMotifIdentifier):
 
     def import_synthetic(self):
         """Import chemical shell synthetic dataset pandas dataframe"""
-        self.df_synthetic = pd.read_pickle(
-            f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/output/df_{self.crystal_structure}.pkl"
-        )
+        raise ValueError('Needs to be implemented in children class.')
+        # self.df_synthetic = pd.read_pickle(
+        #     f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/output/df_{self.crystal_structure}.pkl"
+        # )
 
     def set_information_theory(self, df):
         """Set information theory probabilities to compute entropy, KL, and CE.
