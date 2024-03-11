@@ -1,9 +1,8 @@
 # ChemicalMotifIdentifier
-![PyPI Version](https://img.shields.io/pypi/v/ChemicalMotifIdentifier.svg) ![PyPI Downloads](https://static.pepy.tech/badge/ChemicalMotifIdentifier.svg) ![tests](https://github.com/killiansheriff/ChemicalMotifIdentifier/actions/workflows/python-tests.yml/badge.svg)
 
 This repository contains the codes necessary to perform a chemical-motif characterization of short-range order, as described in our [Quantifying chemical short-range order in metallic alloys](https://arxiv.org/abs/2311.01545) paper and our [Chemical-motif characterization of short-range order using E(3)-equivariant graph neural networks](https://google.com) paper. 
 
-This framework allows for correlating any per-atom property to their local chemical motif. It also allows for the determining of predictive short-range chemical fluctuations length scale. It is based on E(3)-equivariant graph neural networks. Our framework has 100% accuracy in the identification of *any* motif that could ever be found in an fcc, bcc, or hcp solid solution with up to 5 chemical elements.  
+This framework allows for correlating any per-atom property to their local chemical motif. It also allows for the determination of predictive short-range chemical fluctuations length scale. It is based on E(3)-equivariant graph neural networks. Our framework has 100% accuracy in the identification of *any* motif that could ever be found in an fcc, bcc, or hcp solid solution with up to 5 chemical elements.  
 
 ![](assets/figure_2.png)
 
