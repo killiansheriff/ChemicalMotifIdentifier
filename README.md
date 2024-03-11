@@ -21,5 +21,5 @@ pip install htpps://github.com/killiansheriff/ChemicalMotifIdentifier.git
 
 ## Example of usage
 
-A jupyter notebook presenting a few test cases can be found in the `[examples/](examples/) folder.
+A jupyter notebook presenting a few test cases can be found in the [examples/](examples/) folder.
 
