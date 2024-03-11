@@ -19,7 +19,7 @@ pip install htpps://github.com/killiansheriff/ChemicalMotifIdentifier.git
 
 ## Example of usage
 
-```python 
+<!-- ```python 
 from eca import ECA_MD
 
 structure='fcc'
@@ -31,7 +31,7 @@ for i, dump_file in enumerate(dump_files):
     df = eca.predict(root=root, dump_file=dump_file)
     kl = eca.get_kl(df)
     df.to_pickle(root+'df_microstates.pkl')
-```
+``` -->
 
 A jupyter notebook presenting a few test cases can be found in the ``examples/`` folder.
 
