@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "NshellFinder"
+version = "0.0.5"
+description = "OVITO Python modifier to find n-th shell nearest neighbors."
+keywords = ["ovito", "python-modifier"]
+authors = [{name = "Killian Sheriff", email = "ksheriff@mit.edu"}]
+maintainers = [{name = "Killian Sheriff", email = "ksheriff@mit.edu"}]
+license = {text = "MIT License"}
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "ovito >= 3.9.1",
+]
+
+[project.urls]
+repository = "https://github.com/killiansheriff/NshellFinder"
+
+[project.entry-points.'OVITO.Modifier']
+"Warren Cowley Parameters" = "NshellFinder:NshellFinder"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore:module 'sre_parse' is deprecated:DeprecationWarning",
+    "ignore:module 'sre_constants' is deprecated:DeprecationWarning",
+]
