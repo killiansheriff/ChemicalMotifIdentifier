@@ -9,7 +9,7 @@ with open(os.path.join(root, "README.md"), "r", encoding="utf-8") as f:
 
 setup(
     name="chemicalmotifidentifier",
-    version="0.0.1",
+    version="0.0.3",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Killian Sheriff",
