@@ -32,6 +32,8 @@ setup(
         "torch_scatter",
         "tqdm",
         "NshellFinder",
+        "polyaenum",
+        'nsimplex',
     ],
     classifiers=[],
 )
