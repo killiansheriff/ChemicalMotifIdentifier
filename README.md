@@ -1,4 +1,6 @@
 # ChemicalMotifIdentifier
+![PyPI Version](https://img.shields.io/pypi/v/chemicalmotifidentifier.svg) ![PyPI Downloads](https://static.pepy.tech/badge/chemicalmotifidentifier)
+
 > [!WARNING]
 > **To reviewers:** As we are keeping these codes private untill acceptance of the work, the PyPi installation of the package will not work. Please follow the instructions provided in the jupyter notebook that can be found in the [examples/](examples/) folder.
 
