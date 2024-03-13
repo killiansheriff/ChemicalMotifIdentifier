@@ -1,0 +1,1 @@
+Code example for our work entitled [Chemical-motif characterization of short-range order using E(3)-equivariant graph neural networks](https://google.com).
