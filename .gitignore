@@ -1,7 +1,7 @@
 /.vscode
 .ruff_cache
 examples/_frameworks_second_paper.py
-examples/data
+examples/doi-10.48550-arXiv.2311.01545/data
 #Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
