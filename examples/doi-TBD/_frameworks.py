@@ -7,9 +7,9 @@ from chemicalmotifidentifier import (
     BaseSyntheticChemicalMotifIdentifier,
 )
 
-# Model used in LINK
+# Model used in DOI-TBD
 
-INPUT_GDOWN_LINK = '' # Folder with model weights, sample graphs etc.
+INPUT_GDOWN_LINK = 'https://drive.google.com/drive/folders/1Eu2-3-UALS75t12I0DeTyrl7thzVd7y7?usp=sharing' # Folder with model weights, sample graphs etc.
 
 class SyntheticChemicalMotifIdentifier(BaseSyntheticChemicalMotifIdentifier):
     """Just a class that re use the framework above but that matches the parameters of the first paper.
@@ -35,7 +35,7 @@ class SyntheticChemicalMotifIdentifier(BaseSyntheticChemicalMotifIdentifier):
             "lmax": lmax,
             "net_number": number,
             "irreps_node_attr": "5x0e",
-            "model_load": f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/nets/net_{lmax}-{layers}-{outlength}_{number}.pt", #!!!
+            "model_load": f"data/inputs_doi-TBD/net.pt", 
             "mul": 3,  # 50
         }
         self.model_config = model_config
@@ -47,7 +47,7 @@ class MonteCarloChemicalMotifIdentifier(BaseMonteCarloChemicalMotifIdentifier):
     def import_synthetic(self):
         """Import chemical shell synthetic dataset pandas dataframe"""
         self.df_synthetic = pd.read_pickle(
-            f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/output/df_{self.crystal_structure}.pkl" # !!! 
+            f"data/inputs_doi-TBD/df_{self.crystal_structure}.pkl"
         )
     def import_model_config(self):
         lmax, layers, outlength, number = 2, 2, 4, 0  # 2,2,4,0
@@ -63,7 +63,7 @@ class MonteCarloChemicalMotifIdentifier(BaseMonteCarloChemicalMotifIdentifier):
             "lmax": lmax,
             "net_number": number,
             "irreps_node_attr": "5x0e",
-            "model_load": f"/home/ksheriff/PAPERS/second_paper/02_1nn_synthetic/data/nets/net_{lmax}-{layers}-{outlength}_{number}.pt", #!!! 
+            "model_load": f"data/inputs_doi-TBD/net.pt", 
             "mul": 3,  # 50
         }
         self.model_config = model_config
