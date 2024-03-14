@@ -17,7 +17,7 @@ pip install chemicalmotifidentifier
 pip install git+https://github.com/killiansheriff/ChemicalMotifIdentifier.git
 ```
 
-You will also need to install ``torch`` and ``torch_scatter``.
+You will also need to install ``torch``, ``torch_scatter`` and ``torch_geometric``.
 
 ## Example of usage
 
