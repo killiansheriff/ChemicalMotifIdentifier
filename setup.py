@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # Get description from README
 root = os.path.abspath(os.path.dirname(__file__))
@@ -16,7 +16,7 @@ setup(
     author_email="ksheriff@mit.edu",
     description="Chemical Motif Identifier",
     url="https://github.com/killiansheriff/ChemicalMotifIdentifier",
-    packages=["chemicalmotifidentifier"],
+    packages=find_packages(),
     install_requires=[
         "e3nn",
         "matplotlib",
