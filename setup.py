@@ -29,7 +29,7 @@ setup(
         "simplex",
         "torch==2.0.1",
         "torch_geometric",
-        "torch_scatter==2.1.2",
+        #"torch_scatter==2.1.2",
         "tqdm",
         "NshellFinder",
         "polyaenum",
