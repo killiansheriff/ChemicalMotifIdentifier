@@ -1,6 +1,6 @@
 import os
 
-from setuptools import find_packages, setup
+from setuptools import setup
 
 # Get description from README
 root = os.path.abspath(os.path.dirname(__file__))
@@ -26,14 +26,13 @@ setup(
         "pandas",
         "scikit_learn",
         "scipy",
-        "simplex",
-        #"torch==2.0.1",
         "torch_geometric",
-        #"torch_scatter==2.1.2",
         "tqdm",
         "NshellFinder",
         "polyaenum",
         'nsimplex',
+        "torch==2.0.1",
+        "torch_scatter==2.1.2",
     ],
     classifiers=[],
 )
