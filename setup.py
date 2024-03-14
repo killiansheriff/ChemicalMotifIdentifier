@@ -27,7 +27,7 @@ setup(
         "scikit_learn",
         "scipy",
         "simplex",
-        "torch==2.0.1",
+        #"torch==2.0.1",
         "torch_geometric",
         #"torch_scatter==2.1.2",
         "tqdm",
