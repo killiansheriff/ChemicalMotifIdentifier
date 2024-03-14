@@ -31,7 +31,7 @@ setup(
         "NshellFinder",
         "polyaenum",
         'nsimplex',
-        "torch",
+        "torch==2.0.1",
         "torch_scatter==2.1.2",
     ],
     classifiers=[],
