@@ -35,4 +35,5 @@ setup(
         # "torch_scatter==2.1.2",
     ],
     classifiers=[],
+    include_package_data=True,
 )
