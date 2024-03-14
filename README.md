@@ -14,7 +14,7 @@ This framework allows for correlating any per-atom property to their local chemi
 pip install chemicalmotifidentifier
 
 # To install the latest git commit 
-pip install https://github.com/killiansheriff/ChemicalMotifIdentifier.git
+pip install git+https://github.com/killiansheriff/ChemicalMotifIdentifier.git
 ```
 
 ## Example of usage
