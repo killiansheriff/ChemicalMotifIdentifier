@@ -11,10 +11,10 @@ This framework allows for correlating any per-atom property to their local chemi
 
 ```bash
 # To install the latest PyPi release
-pip install chemicalmotifidentifier
+pip install --upgrade chemicalmotifidentifier
 
 # To install the latest git commit 
-pip install git+https://github.com/killiansheriff/ChemicalMotifIdentifier.git
+pip install --upgrade git+https://github.com/killiansheriff/ChemicalMotifIdentifier.git
 ```
 
 You will also need to install ``torch``, ``torch_scatter`` and ``torch_geometric``.
