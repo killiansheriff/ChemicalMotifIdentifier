@@ -26,7 +26,7 @@ setup(
         "pandas",
         "scikit_learn",
         "scipy",
-        "torch_geometric",
+        # "torch_geometric",
         "tqdm",
         "NshellFinder",
         "polyaenum",
