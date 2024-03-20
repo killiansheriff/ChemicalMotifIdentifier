@@ -9,7 +9,7 @@ with open(os.path.join(root, "README.md"), "r", encoding="utf-8") as f:
 
 setup(
     name="chemicalmotifidentifier",
-    version="0.0.8",
+    version="0.0.9",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Killian Sheriff",
@@ -33,6 +33,7 @@ setup(
         'nsimplex',
         # "torch==2.0.1",
         # "torch_scatter==2.1.2",
+        'lovelyplots'
     ],
     classifiers=[],
     include_package_data=True,
