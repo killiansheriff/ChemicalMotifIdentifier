@@ -11,7 +11,8 @@ from torch_geometric.utils.convert import to_networkx
 
 from .transforms import AddEdges
 
-plt.style.use(os.path.join(os.path.dirname(__file__), "mplstyle"))
+import lovelyplots
+plt.style.use('paper')
 
 
 class Plot:
