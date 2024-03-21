@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 # Get description from README
 root = os.path.abspath(os.path.dirname(__file__))
@@ -9,7 +9,7 @@ with open(os.path.join(root, "README.md"), "r", encoding="utf-8") as f:
 
 setup(
     name="chemicalmotifidentifier",
-    version="0.0.9",
+    version="0.0.10",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Killian Sheriff",
