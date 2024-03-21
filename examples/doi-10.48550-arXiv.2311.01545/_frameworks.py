@@ -4,6 +4,7 @@ from simplex import Simplex
 
 from chemicalmotifidentifier import (
     BaseMonteCarloChemicalMotifIdentifier,
+    BasePTMMotifIdentifier,
     BaseSyntheticChemicalMotifIdentifier,
 )
 
@@ -81,6 +82,39 @@ class SyntheticChemicalMotifIdentifier(BaseSyntheticChemicalMotifIdentifier):
 
 
 class MonteCarloChemicalMotifIdentifier(BaseMonteCarloChemicalMotifIdentifier):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.nelement = 3
+        self.dataset_config["one_hot_dim"] = 3
+
+    def import_synthetic(self):
+        """Import chemical shell synthetic dataset pandas dataframe"""
+        self.df_synthetic = pd.read_pickle(
+            f"data/inputs_doi-10.48550-arXiv.2311.01545/df_{self.crystal_structure}.pkl"
+        )
+
+    def import_model_config(self):
+        lmax, layers, outlength, number = 1, 1, 100, 0  # 2,2,4,0
+
+        model_config = {
+            "out_feature_length": outlength,
+            "max_radius": 2.5,
+            "min_radius": 0,
+            "number_of_basis": 10,
+            "num_nodes": 12,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
+            "num_neighbors": 11,  # only used for feqtur enormalization, we don't really care set it to a constant so that we can have only 1 network for all the crystal structure
+            "layers": layers,
+            "lmax": lmax,
+            "net_number": number,
+            "irreps_node_attr": "3x0e",
+            # "model_load": f"/home/ksheriff/PAPERS/first_paper/02_1nn_synthetic/data/nets/net_{lmax}-{layers}-{outlength}_{number}.pt",
+            "model_load": "data/inputs_doi-10.48550-arXiv.2311.01545/net.pt",
+            "mul": 50,  # 50
+        }
+        self.model_config = model_config
+
+
+class PTMMotifIdentifier(BasePTMMotifIdentifier):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.nelement = 3
